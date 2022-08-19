@@ -1,4 +1,12 @@
+# table of contents
+
+- <a href="https://github.com/leesaewa/project_teamcook/blob/main/coding_style_guide.md#html-coding-style-guide">HTML Coding Style Guide</a>
+- <a href="https://github.com/leesaewa/project_teamcook/blob/main/coding_style_guide.md#CSS-Coding-Style-Guide">CSS Coding Style Guide</a>
+- <a href=""></a>
+
 # HTML Coding Style Guide
+
+## 메타태그 `charset`은 `UTF-8`을 권장합니다.
 
 ## Use Lower Case Element Names.
 
@@ -172,7 +180,167 @@
 
 - <a href="https://validator.w3.org/nu/">W3C HTML Validator</a>같은 툴을 활용하여 유효성을 검증합니다.
 
-## 엔티티(Entity) 참조
+---
 
-- 엔티티 참조를 사용하지 않는다.
--
+# CSS Coding Style Guide
+
+## 선언 순서
+
+- 딱히 상관은 없지만 혼란을 피하기 위하여 알파벳 순서대로 속성을 선언합니다.
+
+#### Example
+
+```
+.test {
+  background-color: #000;
+  border: 1px solid #fff;
+  color: #fff;
+  display: block;
+  text-align: center;
+}
+```
+
+## 선언 중지
+
+- 마지막 속성에는 세미클론을 제외해도 무방하지만 일관성 유지와 확장성을 위하여 모든 속성 선언 끝에는 세미클론을 붙입니다.
+
+#### Example
+
+```
+<!-- Bad -->
+.test {
+  background-color: #000;
+  border: 1px solid #fff;
+  color: #fff;
+  display: block;
+  text-align: center
+}
+
+<!-- Good -->
+.test {
+  background-color: #000;
+  border: 1px solid #fff;
+  color: #fff;
+  display: block;
+  text-align: center;
+}
+```
+
+## 속성이름 뒤 여백
+
+- 속성과 값 사이에 한 칸의 여백을 둡니다.
+
+#### Example
+
+```
+<!-- Bad -->
+.test {
+  background-color:#000;
+  border:1px solid #fff;
+  color:#fff;
+  display:block;
+  text-align:center;
+}
+
+<!-- Good -->
+.test {
+  background-color: #000;
+  border: 1px solid #fff;
+  color: #fff;
+  display: block;
+  text-align: center;
+}
+```
+
+## 블록 내 내용 들여쓰기
+
+- 모든 블록 내부에서 들여쓰기를 합니다.
+
+#### Example
+
+```
+.test {
+  background-color: #000;
+  border: 1px solid #fff;
+  color: #fff;
+  display: block;
+  text-align: center;
+}
+
+@media screen {
+  .test {
+    background-color: #000;
+    border: 1px solid #fff;
+    color: #fff;
+    display: block;
+    text-align: center;
+  }
+}
+```
+
+## 선언 블록 분리
+
+- 선택자와 속성 선언 블록 사이에 공백을 사용합니다.
+- 선택자가 여럿일 경우, 각 선택자 간에 줄바꿈하여 구분합니다.
+
+#### Example
+
+```
+<!-- Bad -->
+.test
+{
+  ...
+}
+
+.test, .test2, .test3 {
+  ...
+}
+
+<!-- Good -->
+.test {
+  ...
+}
+
+.test,
+.test2,
+.test3 {
+  ...
+}
+
+```
+
+## naming rule
+
+- 이름은 목적과 형식에 맞게 작성해야 합니다.
+- `class`는 한 눈에 알아보기 쉽도록 `hyphen` 형식으로 붙입니다.
+  - `ex) global-nav`
+  - `형태-의미-순서-상태`를 기본 순서로 사용함.
+- `id`는 javascript, anker 링크를 활용할 때만 붙이도록 합니다.
+  - 이름을 붙여야 할 때는 javascript의 명명 규칙을 참조해, `camelCase 표기법`을 따라 `navBar` 처럼 붙입니다.
+  - 예약어는 사용해도 무방함.
+
+#### Example
+
+```
+<!-- Bad -->
+<div class="show-box">
+  <nav id="nav-wrap">
+    // contents
+  </nav>
+</div>
+
+<!-- Good -->
+<div class="global-nav">
+  <nav id="navBar">
+    // contents
+  </nav>
+</div>
+```
+
+---
+
+# VSCODE setting
+
+## 들여쓰기 공백
+
+- Space 2문자를 사용합니다.
