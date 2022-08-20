@@ -6,7 +6,7 @@ This is our first project, "Team Cook Official Site".
 
 이것은 우리의 첫 번째 프로젝트인 "팀쿡 공식 사이트"입니다.
 
-これは私たちの初プロジェクトである「チームクック公式サイト」です。
+これは私たちの初プロジェクトである「チームクック公式サイト」です。test
 
 Our team consists of three people.
 
